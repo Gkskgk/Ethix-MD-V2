@@ -1,29 +1,29 @@
 name: Node.js CI
 
-on:
-  push:
-    branches:
+on: 
+   push: 
+    branches: 
       -main
-   pull_request:
-     branches:
+   pull_request: 
+     branches: 
      -main
 
-     jobs:
-       build:
+     jobs: 
+       build: 
 
        runs-on: ubuntu-latest
 
-       strategy:
-         matrix:
+       strategy: 
+         matrix: 
            node-version: [20.x]
 
-      steps:
+      steps: 
       -name: Checkout repository
        user: actions/checkout@v3
 
        -name: Set up Node.js
         user: actions/setup-node@v3
-        with:
+        with: 
          node-version: ${{ matrix.node-version }}
 
          -name: Install dependencies
