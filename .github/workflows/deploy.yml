@@ -4,11 +4,15 @@ on:
 
 push:
 
-branches: - main pull_request: branches: - main
+branches: 
+- main 
+pull_request: 
+branches: 
+- main 
 
-jobs:
+jobs: 
 
-build:
+build: 
 
 runs-on: ubuntu-latest
 
